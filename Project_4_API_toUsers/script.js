@@ -6,11 +6,11 @@ fetch(apiUrl)
   .then((users) => {
     renderUsers(users);
 
-    searchInput.addEventListener('input', () => {
+    searchInput.addEventListener("input", () => {
       const searchInputLower = searchInput.value.toLowerCase().trim();
 
-      if (searchInputLower === '') {
-        resultDiv.innerHTML = '';
+      if (searchInputLower === "") {
+        resultDiv.innerHTML = "";
         renderUsers(users);
         return;
       }
@@ -22,24 +22,24 @@ fetch(apiUrl)
       });
 
       //display on the HTML
-      resultDiv.innerHTML = '';
+      resultDiv.innerHTML = "";
 
       if (matchingUsers.length > 0) {
         renderUsers(matchingUsers);
       } else {
-        resultDiv.innerHTML = '<p>No results found.</p>';
+        resultDiv.innerHTML = "<p>No results found.</p>";
       }
     });
   })
   .catch((error) => {
-    console.error('Error fetching API data:', error);
+    console.error("Error fetching API data:", error);
   });
 
 // Function to render users
 function renderUsers(users) {
-  usersList.innerHTML = ''; // Clear existing list
+  usersList.innerHTML = "";
   users.forEach((user) => {
-    const listItem = document.createElement('ul');
+    const listItem = document.createElement("ul");
     listItem.innerHTML = `
       <img src="https://via.placeholder.com/50" alt="${user.name}" style="width:50px;height:50px;border-radius:50%;margin-right:10px;">
       <span>Name: ${user.name}  Email: ${user.email}  Company: ${user.company?.name}</span>`;
