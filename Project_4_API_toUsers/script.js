@@ -39,10 +39,26 @@ fetch(apiUrl)
 function renderUsers(users) {
   usersList.innerHTML = "";
   users.forEach((user) => {
-    const listItem = document.createElement("ul");
-    listItem.innerHTML = `
-      <img src="https://via.placeholder.com/50" alt="${user.name}" style="width:50px;height:50px;border-radius:50%;margin-right:10px;">
+    const listItem = document.createElement("li"); // Changed to 'li' for list item
+
+    // Extract the first letter of the user's name
+    const firstLetter = user.name.charAt(0).toUpperCase();
+
+    // Create a span element to act as the icon
+    const icon = document.createElement("span");
+    icon.textContent = firstLetter;
+    icon.style.fontWeight = "bold"; // Example styling
+    icon.style.marginRight = "10px"; // Space between icon and name
+
+    // Append the icon to the list item
+    listItem.appendChild(icon);
+
+    // Append the user's details to the list item
+    listItem.innerHTML += `
+      
       <span>Name: ${user.name}  Email: ${user.email}  Company: ${user.company?.name}</span>`;
+
+    // Append the list item to the users list
     usersList.appendChild(listItem);
   });
 }
