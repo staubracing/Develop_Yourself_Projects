@@ -54,7 +54,7 @@ searchInput.addEventListener('input', () => {
 
   const matchingEmployees = employees.filter((employee) => {
     return Object.values(employee).some((value) =>
-      value.toString().toLowerCase().includes(searchInputLower)
+      value.toString().toLowerCase().includes(searchInputLower),
     );
   });
 
