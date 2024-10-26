@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Develop Yourself Projects - Color Change Button</title>
+  </head>
+
+  <body>
+    <h1>Develop Yourself Projects - Button</h1>
+    <button id="colorButton">Press Here</button>
+
+    <script>
+      const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
+      let currentColorIndex = 0;
+
+      document
+        .getElementById('colorButton')
+        .addEventListener('click', function () {
+          this.style.backgroundColor = colors[currentColorIndex];
+          currentColorIndex = (currentColorIndex + 1) % colors.length;
+          console.log(`currentColorIndex: ${currentColorIndex}`);
+        });
+    </script>
+  </body>
+</html>

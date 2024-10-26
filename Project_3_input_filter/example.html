@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+  <head> </head>
+
+  <body>
+    <input type="text" id="searchInput" placeholder="Search..." />
+    <div id="result"></div>
+
+    <script>
+      const myObject = {
+        name: 'John Doe',
+        age: 30,
+        city: 'New York',
+      };
+
+      const searchInput = document.getElementById('searchInput');
+      const resultDiv = document.getElementById('result');
+
+      searchInput.addEventListener('input', () => {
+        const searchTerm = searchInput.value.toLowerCase();
+
+        if (searchTerm === '') {
+          resultDiv.innerHTML = '';
+          return;
+        }
+
+        const matchingKeys = Object.keys(myObject).filter((key) => {
+          return (
+            key.toLowerCase().includes(searchTerm) ||
+            myObject[key].toString().toLowerCase().includes(searchTerm)
+          );
+        });
+
+        resultDiv.innerHTML = '';
+
+        if (matchingKeys.length > 0) {
+          matchingKeys.forEach((key) => {
+            resultDiv.innerHTML += `<p>${key}: ${myObject[key]}</p>`;
+          });
+        } else {
+          resultDiv.innerHTML = '<p>No results found.</p>';
+        }
+      });
+    </script>
+  </body>
+</html>
