@@ -38,12 +38,12 @@ function filterUsers(users, searchInputLower) {
 
 // Function to display the reults on the HTML
 function displayResults(users) {
-  resultDiv.innerHTML = ''; //TODO: Remove this line or figure out why it does not work
+  usersList.innerHTML = '';
 
   if (users.length > 0) {
     renderUsers(users);
   } else {
-    resultDiv.innerHTML = '<p>No results found.</p>'; //TODO:  figure out why it does not work
+    usersList.innerHTML = '<p>No results found.</p>';
   }
 }
 

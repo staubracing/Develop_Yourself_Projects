@@ -1,1 +1,11 @@
 node_modules
+
+# Prettier
+.prettierignore
+
+# VSCode
+.vscode
+
+# Cursor
+.cursorignore
+.cursorrules
