@@ -58,7 +58,7 @@ function renderUsers(users) {
 
 // Create a list item for a user
 function createUserListItem(user) {
-  const listItem = document.createElement('li');
+  const listItem = document.createElement('ul');
 
   const firstLetterCap = user.name.charAt(0).toUpperCase();
   const icon = document.createElement('span');
