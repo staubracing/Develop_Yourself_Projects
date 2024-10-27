@@ -38,7 +38,7 @@ function filterUsers(users, searchInputLower) {
 
 // Function to display the reults on the HTML
 function displayResults(users) {
-  // resultDiv.innerHTML = ''; //TODO: Remove this line or figure out why it does not work
+  resultDiv.innerHTML = ''; //TODO: Remove this line or figure out why it does not work
 
   if (users.length > 0) {
     renderUsers(users);
