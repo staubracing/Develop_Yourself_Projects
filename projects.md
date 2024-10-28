@@ -53,3 +53,5 @@
 
 - create a form
 - from show notes
+
+https://docs.google.com/document/d/1zC4wts9HVIxBVdAdGrbk32-JEAbQh-orMGCMZE3sKAI/edit?tab=t.0#heading=h.gwauynib8haa
