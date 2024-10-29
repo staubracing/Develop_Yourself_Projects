@@ -13,13 +13,11 @@
     <script>
       const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
 
-      document
-        .getElementById('colorButton')
-        .addEventListener('click', function () {
-          const randomIndex = Math.floor(Math.random() * colors.length);
-          this.style.backgroundColor = colors[randomIndex];
-          console.log(`randomIndex: ${randomIndex}`);
-        });
+      document.getElementById('colorButton').addEventListener('click', function () {
+        const randomIndex = Math.floor(Math.random() * colors.length);
+        this.style.backgroundColor = colors[randomIndex];
+        console.log(`randomIndex: ${randomIndex}`);
+      });
     </script>
   </body>
 </html>

@@ -14,13 +14,11 @@
       const colors = ['red', 'blue', 'green', 'yellow', 'purple'];
       let currentColorIndex = 0;
 
-      document
-        .getElementById('colorButton')
-        .addEventListener('click', function () {
-          this.style.backgroundColor = colors[currentColorIndex];
-          currentColorIndex = (currentColorIndex + 1) % colors.length;
-          console.log(`currentColorIndex: ${currentColorIndex}`);
-        });
+      document.getElementById('colorButton').addEventListener('click', function () {
+        this.style.backgroundColor = colors[currentColorIndex];
+        currentColorIndex = (currentColorIndex + 1) % colors.length;
+        console.log(`currentColorIndex: ${currentColorIndex}`);
+      });
     </script>
   </body>
 </html>

@@ -20,8 +20,7 @@ function fetchUsers() {
 function setUpSearch(users) {
   searchInput.addEventListener('input', () => {
     const searchInputLower = searchInput.value.toLowerCase().trim();
-    const matchingUsers =
-      searchInputLower === '' ? users : filterUsers(users, searchInputLower);
+    const matchingUsers = searchInputLower === '' ? users : filterUsers(users, searchInputLower);
 
     displayResults(matchingUsers);
   });
