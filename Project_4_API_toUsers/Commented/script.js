@@ -24,14 +24,15 @@ function renderUsers(users) {
   // declaring a function with a name renderUsers This will create the HTML element to display the users
   users.forEach((user) => {
     // Using dot notation - call the users array and applying the javascript forEach method.  we now arrow function named user and the return is listItem( which calls the function `createUserListItem` with the parameter user) and usersList
-    const listItem = createUserListItem(user); // calling the createUserListItem function to create the list item
+    const listItem = createUserListItem(user); // calling the createUserListItem function to create the list item and passing the user as a parameter
     usersList.appendChild(listItem); // appending the list item to the usersList
   });
 }
 
 // Create a list item for a user
 function createUserListItem(user) {
-  const listItem = document.createElement('ul');
+  // Declare the `createUserListItem` function, which takes a `user` parameter.
+  const listItem = document.createElement('ul'); // Create a `ul` HTML element and assign it to the `listItem` variable.
 
   const firstLetterCap = user.name.charAt(0).toUpperCase();
   const icon = document.createElement('span');
@@ -60,8 +61,7 @@ function displayResults(users) {
 function setUpSearch(users) {
   searchInput.addEventListener('input', () => {
     const searchInputLower = searchInput.value.toLowerCase().trim();
-    const matchingUsers =
-      searchInputLower === '' ? users : filterUsers(users, searchInputLower);
+    const matchingUsers = searchInputLower === '' ? users : filterUsers(users, searchInputLower);
 
     displayResults(matchingUsers);
   });
@@ -70,9 +70,7 @@ function setUpSearch(users) {
 // Function to filter users based on search input
 function filterUsers(users, searchInputLower) {
   return users.filter((user) => {
-    return Object.values(user).some((value) =>
-      value.toString().toLowerCase().includes(searchInputLower),
-    );
+    return Object.values(user).some((value) => value.toString().toLowerCase().includes(searchInputLower));
   });
 }
 
