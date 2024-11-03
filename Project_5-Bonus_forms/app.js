@@ -28,7 +28,7 @@ function activateButton() {
 // Function to activate email input when checkbox is clicked
 function activateEmailInput() {
   const form = document.getElementById('myForm');
-  const checkbox = form.querySelector('input[id="emailCheckbox"]');
+  const checkbox = form.querySelector('input[id="subscribe"]');
   const emailInput = form.querySelector('input[id="email"]');
 
   emailInput.style.display = checkbox.checked ? 'block' : 'none';
@@ -42,13 +42,13 @@ function activateEmailInput() {
   });
 
   // Function to post names to API using fetch.
-  function postData() {
+  function postData(data) {
     fetch(apiUrl, {
       method: 'POST',
       heaaders: {
         'Content-Type': 'apllication/json',
       },
-      body: JSON.stringify({ key: value }),
+      body: JSON.stringify(data),
     })
       .then((response) => response.json())
       .then((data) => {
@@ -58,6 +58,17 @@ function activateEmailInput() {
         console.error('error:', error);
       });
   }
+
+  // Add event listener for form submission
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
+    const formData = {
+      firstName: form.querySelector('#firstName').value,
+      lastName: form.querySelector('#lastName').value,
+      email: checkbox.checked ? form.querySelector('#email').value : null,
+    };
+    postData(formData);
+  });
 }
 
 document.addEventListener('DOMContentLoaded', activateButton);
