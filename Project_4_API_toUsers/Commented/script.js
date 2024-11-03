@@ -34,16 +34,16 @@ function createUserListItem(user) {
   // Declare the `createUserListItem` function, which takes a `user` parameter.
   const listItem = document.createElement('ul'); // Create a `ul` HTML element and assign it to the `listItem` variable.
 
-  const firstLetterCap = user.name.charAt(0).toUpperCase();
-  const icon = document.createElement('span');
-  icon.textContent = firstLetterCap;
-  icon.style.fontWeight = 'bold';
-  icon.style.marginRight = '10px';
+  const firstLetterCap = user.name.charAt(0).toUpperCase(); // Declare the `firstLetterCap` variable, which takes the first letter of the `user.name` and converts it to uppercase.
+  const icon = document.createElement('span'); // Create a `span` HTML element and assign it to the `icon` variable.
+  icon.textContent = firstLetterCap; // Set the `textContent` property of the `icon` element to the `firstLetterCap` variable.
+  icon.style.fontWeight = 'bold'; // Set the `fontWeight` style property of the `icon` element to `bold`.
+  icon.style.marginRight = '10px'; // Set the `marginRight` style property of the `icon` element to `10px`.
 
-  listItem.appendChild(icon);
-  listItem.innerHTML += `<span>Name: ${user.name}  Email: ${user.email}  Company: ${user.company?.name}</span>`;
+  listItem.appendChild(icon); // Append the `icon` element the the `listItem` element
+  listItem.innerHTML += `<span>Name: ${user.name}  Email: ${user.email}  Company: ${user.company?.name}</span>`; // set the `innerHTML` property of the `listItem` element to a string that displays the user's name, email, and company name.
 
-  return listItem;
+  return listItem; // Return the `listItem` element.
 }
 
 // Function to display the reults on the HTML
@@ -51,9 +51,9 @@ function displayResults(users) {
   usersList.innerHTML = '';
 
   if (users.length > 0) {
-    renderUsers(users);
+    renderUsers(users); // If there are users, call the `renderUsers` function with the `users` parameter.
   } else {
-    usersList.innerHTML = '<p>No results found.</p>';
+    usersList.innerHTML = '<p>No results found.</p>'; // If there are no users, set the `innerHTML` property of the `usersList` element to `<p>No results found.</p>`.
   }
 }
 
