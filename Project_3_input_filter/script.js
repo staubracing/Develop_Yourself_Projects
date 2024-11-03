@@ -53,9 +53,7 @@ searchInput.addEventListener('input', () => {
   }
 
   const matchingEmployees = employees.filter((employee) => {
-    return Object.values(employee).some((value) =>
-      value.toString().toLowerCase().includes(searchInputLower),
-    );
+    return Object.values(employee).some((value) => value.toString().toLowerCase().includes(searchInputLower));
   });
 
   resultDiv.innerHTML = '';

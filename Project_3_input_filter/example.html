@@ -25,10 +25,7 @@
         }
 
         const matchingKeys = Object.keys(myObject).filter((key) => {
-          return (
-            key.toLowerCase().includes(searchTerm) ||
-            myObject[key].toString().toLowerCase().includes(searchTerm)
-          );
+          return key.toLowerCase().includes(searchTerm) || myObject[key].toString().toLowerCase().includes(searchTerm);
         });
 
         resultDiv.innerHTML = '';

@@ -29,9 +29,7 @@ function setUpSearch(users) {
 // Function to filter users based on search input
 function filterUsers(users, searchInputLower) {
   return users.filter((user) => {
-    return Object.values(user).some((value) =>
-      value.toString().toLowerCase().includes(searchInputLower),
-    );
+    return Object.values(user).some((value) => value.toString().toLowerCase().includes(searchInputLower));
   });
 }
 
