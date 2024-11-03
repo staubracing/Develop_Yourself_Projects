@@ -1,33 +1,32 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Form Project</title>
     <link rel="stylesheet" href="index.css" />
-</head>
+    <script src="app.js" defer></script>
+  </head>
 
-<body>
+  <body>
     <h1>My Form</h1>
-    <form>
-        <div>
-            <input type="text" id="firstName" placeholder="First Name" />
-            <input type="text" id="lastName" placeholder="Last Name" />
-        </div>
+    <form id="myForm">
+      <div>
+        <input type="text" id="firstName" placeholder="First Name" />
+        <input type="text" id="lastName" placeholder="Last Name" />
+      </div>
 
-        <div>
-            <textarea name="comments" rows="10" cols="30" placeholder="Enter your comments here"></textarea>
-        </div>
+      <div>
+        <textarea name="comments" rows="10" cols="30" placeholder="Enter your comments here"></textarea>
+      </div>
 
-        <div>
-            <label for="email">Subscribe to Newsletter</label>
-            <input type="checkbox" id="yesToNewsLetter" /><br />
-            <input type="text" id="email" placeholder="Enter Your Email" />
-        </div>
+      <div>
+        <label for="email">Subscribe to Newsletter</label>
+        <input type="checkbox" id="yesToNewsLetter" /><br />
+        <input type="text" id="email" placeholder="Enter Your Email" />
+      </div>
 
-        <input type="submit" value="Submit" />
+      <input type="submit" value="Submit" />
     </form>
-</body>
-
+  </body>
 </html>
