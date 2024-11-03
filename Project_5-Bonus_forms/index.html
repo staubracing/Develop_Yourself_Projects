@@ -11,17 +11,22 @@
 <body>
     <h1>My Form</h1>
     <form>
-        <input type="text" id="firstName" placeholder="First Name" />
-        <input type="text" id="lastName" placeholder="Last Name" /><br />
-        <textarea>
+        <div>
+            <input type="text" id="firstName" placeholder="First Name" />
+            <input type="text" id="lastName" placeholder="Last Name" />
+        </div>
 
-        </textarea name="comments" rows="10" cols="30"><br />
+        <div>
+            <textarea name="comments" rows="10" cols="30" placeholder="Enter your comments here"></textarea>
+        </div>
 
-        <input type="text" id="email" placeholder="Enter Your Email" />
-        <input type="checkbox" id="yesToNewsLetter"/>
-        <br />
+        <div>
+            <label for="email">Subscribe to Newsletter</label>
+            <input type="checkbox" id="yesToNewsLetter" /><br />
+            <input type="text" id="email" placeholder="Enter Your Email" />
+        </div>
 
-        <input type="submit" value="submit" />
+        <input type="submit" value="Submit" />
     </form>
 </body>
 
