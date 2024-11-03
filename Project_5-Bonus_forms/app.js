@@ -65,6 +65,8 @@ function activateEmailInput() {
     const formData = {
       firstName: form.querySelector('#firstName').value,
       lastName: form.querySelector('#lastName').value,
+      comments: form.querySelector('#comments').value,
+
       email: checkbox.checked ? form.querySelector('#email').value : null,
     };
     postData(formData);
